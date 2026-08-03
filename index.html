@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>태양광·히트펌프 설치 전국 시공 | 난방비·전기료 절감, 정부지원 상담</title>
+<meta name="description" content="2026년 정부지원. 히트펌프 설치비 70%(국비 40%+지방비 30%) 지원. 태양광부터 히트펌프까지 한 번에. 우리 집 지원 대상 여부 무료로 확인해 드립니다.">
+<meta property="og:title" content="태양광·히트펌프 설치 | 전국 시공">
+<meta property="og:description" content="난방비도 전기료도 줄입니다. 설치비 70% 정부지원 대상 여부 무료 확인.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FFFFFF">
+
+<!--
+================================================================
+  ★ 여기만 바꾸면 됩니다
+================================================================
+  1) 전화번호   : "010-0000-0000" 을 전부 실제 번호로 (Ctrl+H 일괄 변경)
+  2) 전화번호는 개인 휴대폰(010)으로 넣어도 됩니다
+  3) 카톡 링크  : "https://pf.kakao.com/_카톡채널ID" 를 실제 채널 URL로
+
+  ※ 사업자등록번호·주소 같은 사업자 정보는 넣지 않았습니다.
+     나중에 사업자등록을 하시면 푸터에 추가하시면 됩니다.
+
+  ※ 지원금 70%(국비 40% + 지방비 30%)는 2026년 정부 발표 기준입니다.
+     지원 대상 지역·조건·예산 소진 여부에 따라 달라지므로
+     매년 한국에너지공단(knrec.or.kr) 공고를 확인하고 갱신하세요.
+================================================================
+-->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+
+<style>
+/* ============================================================
+   디자인 토큰
+   ============================================================ */
+:root{
+  --g-700:#15803D;
+  --g-600:#16A34A;
+  --g-500:#22C55E;
+  --g-100:#DCFCE7;
+  --g-50:#F0FDF4;
+
+  --s-700:#C2410C;   /* 태양광 강조 */
+  --s-600:#EA580C;
+  --s-100:#FFEDD5;
+  --s-50:#FFF7ED;
+
+  --ink:#0F172A;     /* 제목 */
+  --ink-2:#475569;   /* 본문 */
+  --ink-3:#64748B;   /* 보조 */
+  --line:#E2E8F0;
+  --bg:#FFFFFF;
+  --bg-soft:#F8FAFC;
+  --red:#DC2626;
+
+  --kakao:#FEE500;
+  --kakao-ink:#3C1E1E;
+
+  --r-lg:22px;
+  --r-md:16px;
+  --sh-sm:0 1px 3px rgba(15,23,42,.06), 0 1px 2px rgba(15,23,42,.04);
+  --sh-md:0 4px 16px rgba(15,23,42,.07);
+  --sh-lg:0 12px 32px rgba(15,23,42,.09);
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+
+html{
+  font-size:18px;
+  -webkit-text-size-adjust:100%;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,system-ui,'Malgun Gothic',sans-serif;
+  background:var(--bg);
+  color:var(--ink-2);
+  line-height:1.7;
+  letter-spacing:-0.022em;
+  word-break:keep-all;
+}
+
+img{max-width:100%;display:block;}
+svg{display:block;}
+
+/* ============================================================
+   레이아웃
+   ============================================================ */
+.wrap{width:100%;max-width:660px;margin:0 auto;padding:0 20px;}
+section{padding:72px 0;scroll-margin-top:78px;}
+.soft{background:var(--bg-soft);}
+
+/* 섹션 머리 */
+.sec-head{text-align:center;margin-bottom:40px;}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--g-50);color:var(--g-700);
+  border:1px solid var(--g-100);
+  font-size:0.94rem;font-weight:800;letter-spacing:0.01em;
+  padding:7px 16px;border-radius:999px;margin-bottom:18px;
+}
+.eyebrow.sun{background:var(--s-50);color:var(--s-700);border-color:var(--s-100);}
+.eyebrow svg{width:16px;height:16px;}
+
+h2{
+  font-size:2.15rem;line-height:1.3;font-weight:800;
+  color:var(--ink);letter-spacing:-0.04em;
+}
+.sec-sub{font-size:1.1rem;color:var(--ink-3);font-weight:500;margin-top:12px;}
+h3{font-size:1.34rem;line-height:1.4;font-weight:800;color:var(--ink);letter-spacing:-0.03em;}
+.g{color:var(--g-600);}
+.s{color:var(--s-600);}
+.note{font-size:0.92rem;color:var(--ink-3);line-height:1.65;margin-top:18px;text-align:center;}
+
+/* ============================================================
+   버튼
+   ============================================================ */
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  width:100%;min-height:68px;padding:14px 22px;
+  border-radius:999px;
+  font-size:1.24rem;font-weight:800;letter-spacing:-0.03em;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:transform .14s ease, box-shadow .14s ease, background .14s ease;
+}
+.btn:active{transform:translateY(2px);}
+.btn-call{background:var(--g-600);color:#fff;box-shadow:0 8px 22px rgba(22,163,74,.32);}
+.btn-call:hover{background:var(--g-700);}
+.btn-kakao{background:var(--kakao);color:var(--kakao-ink);box-shadow:0 8px 22px rgba(254,229,0,.35);}
+.btn-ghost{
+  background:#fff;color:var(--ink);border:2px solid var(--line);
+  box-shadow:var(--sh-sm);
+}
+.btn .ico{width:26px;height:26px;flex:none;}
+
+/* ============================================================
+   상단 바
+   ============================================================ */
+header{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:11px 20px;padding-top:calc(11px + env(safe-area-inset-top));
+}
+.logo{display:flex;align-items:center;gap:10px;min-width:0;}
+.logo .mark{width:34px;height:34px;flex:none;}
+.logo .txt{display:flex;flex-direction:column;line-height:1.18;min-width:0;}
+.logo .nm{font-size:1.1rem;font-weight:800;color:var(--ink);letter-spacing:-0.035em;white-space:nowrap;}
+.logo .sv{font-size:0.8rem;font-weight:700;color:var(--g-600);letter-spacing:-0.02em;white-space:nowrap;}
+.h-cta{display:flex;align-items:center;gap:7px;flex:none;}
+.h-btn{
+  display:flex;align-items:center;gap:6px;
+  min-height:48px;padding:0 15px;border-radius:999px;
+  font-size:0.98rem;font-weight:800;white-space:nowrap;text-decoration:none;
+}
+.h-btn:active{transform:translateY(2px);}
+.h-btn svg{width:18px;height:18px;flex:none;}
+.h-btn.call{background:var(--g-600);color:#fff;box-shadow:0 3px 10px rgba(22,163,74,.3);}
+.h-btn.kko{background:var(--kakao);color:var(--kakao-ink);box-shadow:0 3px 10px rgba(254,229,0,.4);}
+
+@media (max-width:430px){
+  header{padding-left:14px;padding-right:14px;gap:8px;}
+  .logo .mark{width:30px;height:30px;}
+  .logo .nm{font-size:0.98rem;}
+  .logo .sv{font-size:0.72rem;}
+  .h-btn{padding:0 13px;font-size:0.92rem;gap:5px;}
+  .h-btn svg{width:17px;height:17px;}
+}
+@media (max-width:360px){
+  .logo .sv{display:none;}
+  .h-btn{padding:0 11px;}
+}
+
+/* ============================================================
+   히어로
+   ============================================================ */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 50% -80px, var(--g-50) 0%, rgba(240,253,244,0) 70%),
+    #fff;
+  padding:52px 0 64px;text-align:center;
+}
+.hero .badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--g-50);border:1px solid var(--g-100);color:var(--g-700);
+  font-size:0.98rem;font-weight:800;
+  padding:9px 18px;border-radius:999px;margin-bottom:24px;
+}
+.hero h1{
+  font-size:2.7rem;line-height:1.24;font-weight:900;
+  color:var(--ink);letter-spacing:-0.048em;margin-bottom:18px;
+}
+.hero h1 em{font-style:normal;color:var(--g-600);display:block;}
+.hero .h-sub{font-size:1.14rem;color:var(--ink-3);font-weight:500;margin-bottom:34px;}
+.hero-art{margin:0 auto 34px;max-width:330px;}
+
+/* 히어로 3분할 아이콘 */
+.trio{
+  display:grid;grid-template-columns:1fr 1fr 1fr;
+  gap:8px;margin-bottom:36px;
+}
+.trio-item{position:relative;text-align:center;padding-top:10px;}
+.trio-item + .trio-item::before{
+  content:"";position:absolute;left:-4px;top:22px;bottom:14px;width:1px;background:var(--line);
+}
+.trio .t-ico{
+  position:relative;width:64px;height:64px;margin:0 auto 12px;
+  background:var(--g-50);border-radius:20px;
+  display:flex;align-items:center;justify-content:center;
+}
+.trio .t-ico svg{width:32px;height:32px;}
+.trio .t-no{
+  position:absolute;top:-8px;left:-6px;
+  width:26px;height:26px;border-radius:50%;
+  background:var(--g-600);color:#fff;
+  font-size:0.76rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  border:2px solid #fff;
+}
+.trio .t-title{font-size:1.06rem;font-weight:800;color:var(--ink);line-height:1.35;}
+.trio .t-desc{font-size:0.86rem;color:var(--ink-3);font-weight:500;margin-top:4px;line-height:1.45;}
+
+.urgency{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  margin-top:18px;font-size:1rem;font-weight:700;color:var(--s-700);
+  line-height:1.5;
+}
+.urgency svg{width:18px;height:18px;flex:none;}
+.hero-foot{font-size:0.88rem;color:var(--ink-3);margin-top:26px;line-height:1.7;}
+
+/* ============================================================
+   신뢰 띠 (실적)
+   ============================================================ */
+.stats{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;
+}
+.stat{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+  padding:22px 10px;text-align:center;box-shadow:var(--sh-sm);
+}
+.stat .v{font-size:1.9rem;font-weight:900;color:var(--g-600);letter-spacing:-0.05em;line-height:1.15;}
+.stat .v small{font-size:1rem;font-weight:800;}
+.stat .k{font-size:0.92rem;color:var(--ink-3);font-weight:700;margin-top:4px;line-height:1.4;}
+
+/* ============================================================
+   두 기둥 카드
+   ============================================================ */
+.pillars{display:grid;grid-template-columns:1fr;gap:18px;}
+.pillar{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:28px 24px;box-shadow:var(--sh-md);
+  display:flex;flex-direction:column;
+  border-top:5px solid var(--g-500);
+}
+.pillar.pv{border-top-color:var(--s-600);}
+.pillar .p-art{width:78px;margin-bottom:16px;}
+.pillar .p-kicker{font-size:0.95rem;font-weight:800;color:var(--ink-3);}
+.pillar h3{font-size:1.7rem;margin:2px 0 10px;letter-spacing:-0.04em;}
+.pillar.hp h3{color:var(--g-700);}
+.pillar.pv h3{color:var(--s-700);}
+.pillar p{font-size:1.04rem;color:var(--ink-2);font-weight:500;margin-bottom:20px;flex:1;}
+.p-link{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  min-height:58px;border-radius:999px;
+  font-size:1.08rem;font-weight:800;text-decoration:none;
+}
+.pillar.hp .p-link{background:var(--g-50);color:var(--g-700);}
+.pillar.pv .p-link{background:var(--s-50);color:var(--s-700);}
+.pillar .p-link:active{transform:translateY(2px);}
+
+/* 강조 배너 */
+.banner{
+  margin-top:20px;background:var(--ink);color:#fff;
+  border-radius:var(--r-lg);padding:28px 24px;
+}
+.banner h3{color:#fff;margin-bottom:10px;}
+.banner p{font-size:1.04rem;color:#CBD5E1;font-weight:500;}
+.banner b{color:var(--g-500);}
+.banner .p-link{margin-top:20px;background:var(--g-600);color:#fff;}
+
+/* ============================================================
+   가로 막대 통계
+   ============================================================ */
+.barlist{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:26px 22px;box-shadow:var(--sh-sm);
+}
+.barlist .bl-title{font-size:1.06rem;font-weight:800;color:var(--ink);margin-bottom:20px;}
+.bar-row{margin-bottom:20px;}
+.bar-row:last-child{margin-bottom:0;}
+.bar-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:8px;}
+.bar-name{font-size:1.02rem;font-weight:700;color:var(--ink-2);}
+.bar-val{font-size:1.3rem;font-weight:900;color:var(--ink);letter-spacing:-0.04em;font-variant-numeric:tabular-nums;}
+.bar-row.hi .bar-name{color:var(--g-700);font-weight:800;}
+.bar-row.hi .bar-val{color:var(--g-600);}
+.bar-track{background:#EEF2F6;border-radius:999px;height:12px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:999px;width:0;background:#94A3B8;transition:width 1.1s cubic-bezier(.2,.7,.3,1);}
+.bar-fill.mid{background:#64748B;}
+.bar-fill.good{background:linear-gradient(90deg,var(--g-500),var(--g-600));}
+.bar-fill.sun{background:linear-gradient(90deg,#FB923C,var(--s-600));}
+.bar-fill.slate{background:#CBD5E1;}
+
+/* ============================================================
+   비교표 (X / ✓)
+   ============================================================ */
+.vs{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  overflow:hidden;box-shadow:var(--sh-sm);
+}
+.vs table{width:100%;border-collapse:collapse;font-size:1rem;}
+.vs thead th{
+  padding:16px 8px;font-size:0.98rem;font-weight:800;
+  background:var(--bg-soft);color:var(--ink-3);border-bottom:1px solid var(--line);
+}
+.vs thead th.good{background:var(--g-50);color:var(--g-700);}
+.vs tbody th{
+  text-align:left;padding:16px 14px;font-weight:800;color:var(--ink);
+  font-size:1rem;border-bottom:1px solid var(--line);white-space:nowrap;
+}
+.vs tbody td{
+  padding:16px 8px;text-align:center;font-weight:700;font-size:0.98rem;
+  border-bottom:1px solid var(--line);line-height:1.45;
+}
+.vs tbody td.bad{color:var(--ink-3);}
+.vs tbody td.good{background:var(--g-50);color:var(--g-700);font-weight:800;}
+.vs tbody tr:last-child th,.vs tbody tr:last-child td{border-bottom:none;}
+.vs .mk{display:inline-block;margin-right:5px;font-weight:900;}
+.vs .mk.x{color:var(--red);}
+.vs .mk.o{color:var(--g-600);}
+
+/* ============================================================
+   태양광 활용법 카드
+   ============================================================ */
+.use{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:28px 24px;margin-bottom:16px;box-shadow:var(--sh-sm);
+}
+.use .u-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+.use .u-no{
+  flex:none;width:46px;height:46px;border-radius:14px;
+  background:var(--s-600);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.2rem;font-weight:900;
+}
+.use h3{font-size:1.42rem;letter-spacing:-0.04em;}
+.use p{font-size:1.06rem;color:var(--ink-2);font-weight:500;}
+.use .u-fact{
+  margin-top:18px;background:var(--s-50);border-radius:var(--r-md);
+  padding:18px;font-size:1.02rem;font-weight:600;color:#7C2D12;line-height:1.65;
+}
+.use .u-fact b{color:var(--s-700);font-size:1.2rem;font-weight:900;}
+.use .u-who{
+  margin-top:12px;display:flex;align-items:flex-start;gap:8px;
+  font-size:0.98rem;font-weight:700;color:var(--ink-3);
+}
+.use .u-who svg{width:19px;height:19px;flex:none;margin-top:3px;color:var(--s-600);}
+
+/* ============================================================
+   지원금
+   ============================================================ */
+.fund{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:30px 24px;box-shadow:var(--sh-md);text-align:center;
+}
+.fund .f-cap{font-size:1.02rem;font-weight:700;color:var(--ink-3);}
+.fund .f-big{
+  font-size:4.2rem;font-weight:900;color:var(--g-600);
+  letter-spacing:-0.06em;line-height:1.05;margin:6px 0;
+}
+.fund .f-big small{font-size:1.8rem;font-weight:800;}
+.fund .f-note{font-size:1.04rem;font-weight:700;color:var(--ink);}
+.fund .f-bars{margin-top:26px;text-align:left;}
+
+.cond{
+  background:var(--s-50);border:1px solid var(--s-100);
+  border-radius:var(--r-lg);padding:26px 24px;margin-top:18px;
+}
+.cond h3{color:var(--s-700);margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.cond h3 svg{width:22px;height:22px;flex:none;}
+.cond p{font-size:1.04rem;color:#7C2D12;font-weight:500;}
+.cond b{font-weight:800;}
+
+/* ============================================================
+   절차 4단계
+   ============================================================ */
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.step{text-align:center;}
+.step .s-tile{
+  position:relative;width:78px;height:78px;margin:0 auto 12px;
+  background:var(--g-600);border-radius:22px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 18px rgba(22,163,74,.25);
+}
+.step .s-tile svg{width:36px;height:36px;color:#fff;}
+.step .s-no{
+  position:absolute;top:-9px;left:-9px;
+  width:30px;height:30px;border-radius:50%;
+  background:#fff;color:var(--g-700);
+  font-size:0.9rem;font-weight:900;
+  display:flex;align-items:center;justify-content:center;
+  border:2px solid var(--g-100);
+}
+.step h3{font-size:1.14rem;margin-bottom:4px;}
+.step p{font-size:0.94rem;color:var(--ink-3);font-weight:500;line-height:1.5;}
+
+.alert{
+  margin-top:26px;background:#FFFBEB;border:1px solid #FDE68A;
+  border-radius:var(--r-lg);padding:24px;
+}
+.alert h3{color:#92400E;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.alert h3 svg{width:22px;height:22px;flex:none;}
+.alert ul{list-style:none;}
+.alert li{
+  font-size:1.02rem;color:#78350F;font-weight:600;line-height:1.6;
+  padding-left:20px;position:relative;margin-bottom:8px;
+}
+.alert li::before{content:"·";position:absolute;left:6px;font-weight:900;}
+.alert li:last-child{margin-bottom:0;}
+
+/* ============================================================
+   원리
+   ============================================================ */
+.analogy{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:28px 22px;text-align:center;margin-bottom:20px;box-shadow:var(--sh-sm);
+}
+.analogy .quote{
+  font-size:1.5rem;font-weight:900;color:var(--ink);
+  line-height:1.4;letter-spacing:-0.04em;
+}
+.analogy .quote u{text-decoration:none;box-shadow:inset 0 -13px 0 var(--g-100);}
+.analogy p{font-size:1.04rem;color:var(--ink-2);margin-top:12px;font-weight:500;}
+
+.flow-step{
+  display:flex;align-items:center;gap:16px;
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:20px;box-shadow:var(--sh-sm);
+}
+.flow-step.last{border-color:var(--g-500);background:var(--g-50);}
+.flow-step .art{flex:none;width:74px;}
+.flow-step .no{
+  display:inline-block;background:var(--g-50);color:var(--g-700);
+  font-size:0.86rem;font-weight:800;padding:3px 11px;border-radius:999px;margin-bottom:5px;
+}
+.flow-step h3{font-size:1.16rem;margin-bottom:3px;}
+.flow-step p{font-size:1rem;color:var(--ink-3);font-weight:500;}
+.arrow-down{display:flex;justify-content:center;padding:7px 0;}
+
+/* ============================================================
+   시공 사례
+   ============================================================ */
+.case{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  overflow:hidden;margin-bottom:18px;box-shadow:var(--sh-md);
+}
+.case-frame{
+  position:relative;aspect-ratio:16/10;background:var(--bg-soft);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:10px;color:#94A3B8;text-align:center;padding:20px;
+}
+.case-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.case-frame .ph-txt{font-size:0.96rem;font-weight:700;line-height:1.5;}
+.case-body{padding:22px;}
+.case-badge{
+  display:inline-block;font-size:0.86rem;font-weight:800;
+  padding:5px 12px;border-radius:999px;margin-bottom:9px;
+}
+.case-badge.hp{background:var(--g-50);color:var(--g-700);}
+.case-badge.pv{background:var(--s-50);color:var(--s-700);}
+.case-badge.both{background:#EEF2F6;color:var(--ink);}
+.case-body h3{font-size:1.22rem;margin-bottom:3px;}
+.case-body .spec{font-size:0.98rem;color:var(--ink-3);font-weight:500;}
+.case-tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px;}
+.tile{border-radius:var(--r-md);padding:14px 10px;text-align:center;}
+.tile .t-k{font-size:0.84rem;font-weight:700;opacity:.85;}
+.tile .t-v{font-size:1.5rem;font-weight:900;letter-spacing:-0.04em;line-height:1.2;}
+.tile.solid{background:var(--g-600);color:#fff;}
+.tile.light{background:var(--g-50);color:var(--g-700);}
+.tile.solid-s{background:var(--s-600);color:#fff;}
+.tile.light-s{background:var(--s-50);color:var(--s-700);}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+  margin-bottom:12px;overflow:hidden;box-shadow:var(--sh-sm);
+}
+.faq summary{
+  list-style:none;cursor:pointer;
+  display:flex;align-items:center;gap:12px;
+  padding:22px 20px;min-height:66px;
+  font-size:1.1rem;font-weight:800;color:var(--ink);line-height:1.45;
+}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary .q{
+  flex:none;width:30px;height:30px;border-radius:50%;
+  background:var(--g-50);color:var(--g-700);
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.95rem;font-weight:900;
+}
+.faq summary .chev{
+  margin-left:auto;flex:none;width:22px;height:22px;color:var(--ink-3);
+  transition:transform .2s ease;
+}
+.faq[open] summary .chev{transform:rotate(180deg);}
+.faq .a{
+  padding:0 20px 22px 62px;
+  font-size:1.04rem;color:var(--ink-2);font-weight:500;line-height:1.7;
+}
+.faq .a b{color:var(--ink);font-weight:800;}
+
+/* ============================================================
+   마무리 CTA
+   ============================================================ */
+.final{
+  background:linear-gradient(160deg,#052E16 0%,#14532D 55%,#166534 100%);
+  color:#fff;text-align:center;padding:70px 0;
+}
+.final .eyebrow{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.2);color:#BBF7D0;}
+.final h2{color:#fff;font-size:2.2rem;}
+.final .sec-sub{color:#BBF7D0;margin-bottom:32px;}
+.final .btn{margin-bottom:12px;}
+.final .btn-call{background:#fff;color:var(--g-700);box-shadow:0 8px 24px rgba(0,0,0,.25);}
+.final .f-note{font-size:0.95rem;color:#86EFAC;margin-top:14px;}
+
+/* ============================================================
+   푸터
+   ============================================================ */
+footer{
+  background:var(--bg-soft);border-top:1px solid var(--line);
+  padding:46px 0 40px;color:var(--ink-3);font-size:0.98rem;line-height:1.7;
+}
+.f-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px;}
+.f-brand .mark{width:36px;height:36px;flex:none;}
+.f-brand .name{font-size:1.24rem;font-weight:800;color:var(--ink);letter-spacing:-0.03em;}
+.f-tag{font-size:1rem;color:var(--ink-3);font-weight:500;margin-bottom:26px;}
+
+/* 연락 카드 */
+.f-contact{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:24px 22px;box-shadow:var(--sh-sm);margin-bottom:26px;
+}
+.f-tel{
+  display:flex;align-items:center;gap:12px;
+  text-decoration:none;color:var(--ink);
+  padding-bottom:16px;margin-bottom:16px;border-bottom:1px solid var(--line);
+}
+.f-tel .ic{
+  flex:none;width:46px;height:46px;border-radius:14px;
+  background:var(--g-50);display:flex;align-items:center;justify-content:center;
+}
+.f-tel .ic svg{width:24px;height:24px;color:var(--g-600);}
+.f-tel .k{font-size:0.9rem;font-weight:700;color:var(--ink-3);line-height:1.3;}
+.f-tel .v{font-size:1.52rem;font-weight:900;color:var(--g-700);letter-spacing:-0.03em;line-height:1.25;}
+.f-line{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px;font-size:0.98rem;}
+.f-line:last-child{margin-bottom:0;}
+.f-line .lk{flex:none;width:74px;font-weight:800;color:var(--ink);}
+.f-line .lv{color:var(--ink-2);font-weight:500;}
+.f-line .lv b{color:var(--g-700);font-weight:800;}
+
+/* 빠른 이동 */
+.f-nav{
+  display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:26px;
+}
+.f-nav a{
+  display:flex;align-items:center;gap:7px;
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-md);
+  min-height:52px;padding:10px 14px;
+  font-size:0.98rem;font-weight:700;color:var(--ink-2);text-decoration:none;
+}
+.f-nav a:active{background:var(--g-50);}
+.f-nav a svg{width:16px;height:16px;flex:none;color:var(--g-600);}
+
+.f-disc{
+  margin-top:4px;background:#fff;border:1px solid var(--line);
+  border-radius:var(--r-md);padding:16px 18px;
+  font-size:0.9rem;line-height:1.7;color:#8496AC;
+}
+.f-copy{margin-top:18px;font-size:0.9rem;color:#94A3B8;}
+
+/* 맨 위로 */
+.to-top{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;min-height:56px;margin-top:24px;
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  font-family:inherit;font-size:1rem;font-weight:800;color:var(--ink-2);
+  text-decoration:none;box-shadow:var(--sh-sm);
+}
+.to-top:active{transform:translateY(2px);}
+.to-top svg{width:18px;height:18px;}
+
+@media (min-width:720px){
+  .f-nav{grid-template-columns:repeat(3,1fr);}
+}
+
+/* ============================================================
+   데스크톱 우측 스크롤 네비
+   ============================================================ */
+.spy{display:none;}
+@media (min-width:1180px){
+  .spy{
+    display:block;position:fixed;right:34px;top:50%;transform:translateY(-50%);
+    z-index:50;text-align:right;
+  }
+  .spy a{
+    display:block;font-size:0.86rem;font-weight:700;color:#94A3B8;
+    text-decoration:none;padding:6px 0;transition:color .18s ease;
+  }
+  .spy a:hover{color:var(--ink-2);}
+  .spy a.on{color:var(--g-600);font-weight:800;}
+}
+
+/* ============================================================
+   등장 애니메이션
+   내용은 기본적으로 항상 보입니다. JS 동작 시에만(.js) 효과가 붙습니다.
+   ============================================================ */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease;}
+.js .reveal.on{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){
+  .js .reveal{opacity:1;transform:none;transition:none;}
+  .bar-fill{transition:none;}
+  html{scroll-behavior:auto;}
+}
+
+/* ============================================================
+   태블릿 이상
+   ============================================================ */
+@media (min-width:720px){
+  section{padding:96px 0;}
+  .hero{padding:76px 0 90px;}
+  .hero h1{font-size:3.4rem;}
+  h2{font-size:2.6rem;}
+  .wrap{max-width:800px;}
+    .pillars{grid-template-columns:1fr 1fr;}
+  .steps{grid-template-columns:repeat(4,1fr);}
+  .trio .t-ico{width:74px;height:74px;}
+  .trio .t-title{font-size:1.14rem;}
+  .trio .t-desc{font-size:0.95rem;}
+}
+</style>
+
+<script>
+/* 자바스크립트가 살아 있을 때만 등장 효과를 켭니다.
+   (스크립트가 막히면 이 줄이 실행되지 않아 → 모든 내용이 그냥 보입니다) */
+document.documentElement.className += ' js';
+</script>
+
+<!-- 구글 검색결과에 전화번호·영업시간·업종이 표시되도록 하는 정보입니다.
+     ★ 전화번호와 주소(url)를 실제 값으로 바꾸세요. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "name": "태양광·히트펌프 설치",
+  "description": "전국 태양광·히트펌프 설치 시공. 기름보일러를 히트펌프로 교체해 난방비를 줄이고, 지붕 태양광으로 전기료를 줄입니다. 정부지원 신청 대행.",
+  "url": "https://example.com/",
+  "telephone": "+82-10-0000-0000",
+  "priceRange": "무료 상담",
+  "areaServed": {
+    "@type": "Country",
+    "name": "대한민국"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "08:00",
+    "closes": "20:00"
+  }],
+  "knowsAbout": ["태양광 설치","히트펌프 설치","공기열 히트펌프","기름보일러 교체","난방비 절감","정부지원금 신청 대행"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "시공 항목",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "지붕 태양광 설치" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "공기열 히트펌프 설치" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "정부지원금 신청 대행" } }
+    ]
+  }
+}
+</script>
+
+<!-- 자주 묻는 질문이 검색결과에 펼쳐져 보이도록 하는 정보입니다. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "추운 날에도 히트펌프로 따뜻하게 난방이 되나요?",
+      "acceptedAnswer": { "@type": "Answer", "text": "됩니다. 다만 바깥이 아주 추워질수록 효율은 떨어집니다. 그래서 정부 보급사업도 비교적 따뜻한 지역부터 시작했습니다. 정부가 성능을 확인한 제품만 사용하며, 집의 위치와 단열 상태를 보고 맞지 않으면 맞지 않는다고 안내해 드립니다." }
+    },
+    {
+      "@type": "Question",
+      "name": "히트펌프로 바꾸면 방바닥 배관을 다 뜯어야 하나요?",
+      "acceptedAnswer": { "@type": "Answer", "text": "아닙니다. 지금 쓰시는 방바닥 배관을 그대로 씁니다. 보일러 자리에 있던 기름보일러를 빼고 히트펌프를 연결하는 공사라 집을 뜯어고칠 일이 없습니다." }
+    },
+    {
+      "@type": "Question",
+      "name": "히트펌프를 쓰면 전기료가 오히려 많이 나오지 않나요?",
+      "acceptedAnswer": { "@type": "Answer", "text": "전기는 더 쓰지만 기름값이 통째로 없어지기 때문에 합쳐 보면 적게 나옵니다. 정부가 히트펌프를 쓰는 집에는 누진제를 적용하지 않는 별도 요금제를 만들기로 했고, 지붕 태양광까지 얹으면 늘어난 전기를 직접 만들어 쓰게 됩니다." }
+    },
+    {
+      "@type": "Question",
+      "name": "정부지원금 신청 서류가 복잡하지 않나요?",
+      "acceptedAnswer": { "@type": "Answer", "text": "서류는 저희가 다 준비해서 대신 넣습니다. 도장 찍으실 것만 확인해 주시면 되고, 관공서에 직접 가실 일은 없습니다." }
+    },
+    {
+      "@type": "Question",
+      "name": "태양광과 히트펌프 공사는 며칠이나 걸리나요?",
+      "acceptedAnswer": { "@type": "Answer", "text": "보통 하루에서 이틀이면 끝납니다. 태양광과 히트펌프를 같이 하시면 조금 더 걸리지만, 공사하는 동안 집을 비우실 필요는 없습니다." }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- ================= 상단 바 ================= -->
+<header>
+  <div class="logo">
+    <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+      <rect width="40" height="40" rx="11" fill="#16A34A"/>
+      <path d="M12 25 L20 12 L28 25 Z" fill="#BBF7D0"/>
+      <circle cx="20" cy="27" r="4.5" fill="#fff"/>
+    </svg>
+    <span class="txt">
+      <span class="nm">태양광·히트펌프</span>
+      <span class="sv">정부지원 설치 상담</span>
+    </span>
+  </div>
+  <div class="h-cta">
+    <a class="h-btn call" href="tel:010-0000-0000">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+      전화
+    </a>
+    <a class="h-btn kko" href="https://pf.kakao.com/_카톡채널ID" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.3c0 2.6 1.7 4.9 4.3 6.2-.2.7-.7 2.5-.8 2.9-.1.5.2.5.4.4.2-.1 2.7-1.8 3.7-2.5.5.1 1.1.1 1.6.1 5.1 0 9.2-3.3 9.2-7.3S17.1 3 12 3z"/></svg>
+      카톡
+    </a>
+  </div>
+</header>
+
+<!-- ================= 우측 스크롤 네비 (데스크톱) ================= -->
+<nav class="spy" id="spy" aria-label="섹션 바로가기">
+  <a href="#top">홈</a>
+  <a href="#menu">하는 일</a>
+  <a href="#solar">태양광</a>
+  <a href="#heatpump">히트펌프</a>
+  <a href="#support">정부지원금</a>
+  <a href="#process">진행 절차</a>
+  <a href="#faq">자주 묻는 질문</a>
+</nav>
+
+<!-- ================= 히어로 ================= -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <span class="badge">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg>
+      2026 정부지원 사업
+    </span>
+
+    <h1>난방비도 전기료도<em>연 108만원 아끼세요</em></h1>
+    <p class="h-sub">지붕에는 태양광, 보일러 자리엔 히트펌프.<br>한 업체에서 둘 다 해 드립니다.</p>
+
+    <div class="hero-art">
+      <svg viewBox="0 0 340 190" role="img" aria-label="지붕에 태양광을 얹고 옆에 히트펌프를 설치한 집 그림">
+        <circle cx="46" cy="36" r="19" fill="#FCD34D"/>
+        <g stroke="#FCD34D" stroke-width="4.5" stroke-linecap="round">
+          <path d="M46 8 L46 3"/><path d="M46 69 L46 64"/>
+          <path d="M18 36 L13 36"/><path d="M79 36 L74 36"/>
+          <path d="M25 15 L21 11"/><path d="M67 57 L71 61"/>
+          <path d="M67 15 L71 11"/><path d="M25 57 L21 61"/>
+        </g>
+        <rect x="0" y="164" width="340" height="26" rx="8" fill="#DCFCE7"/>
+        <rect x="94" y="96" width="146" height="70" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3"/>
+        <path d="M80 100 L167 50 L254 100 Z" fill="#F97316"/>
+        <path d="M80 100 L167 50 L254 100 Z" fill="none" stroke="#EA580C" stroke-width="3" stroke-linejoin="round"/>
+        <g transform="rotate(-30 152 78)">
+          <rect x="118" y="66" width="70" height="25" rx="3" fill="#1E40AF" stroke="#1E3A8A" stroke-width="3"/>
+          <g stroke="#93C5FD" stroke-width="2.2">
+            <line x1="141" y1="66" x2="141" y2="91"/><line x1="164" y1="66" x2="164" y2="91"/>
+            <line x1="118" y1="78" x2="188" y2="78"/>
+          </g>
+        </g>
+        <rect x="112" y="114" width="38" height="34" rx="5" fill="#FCD34D" stroke="#D97706" stroke-width="3"/>
+        <line x1="131" y1="114" x2="131" y2="148" stroke="#D97706" stroke-width="3"/>
+        <line x1="112" y1="131" x2="150" y2="131" stroke="#D97706" stroke-width="3"/>
+        <rect x="178" y="122" width="36" height="44" rx="5" fill="#78350F"/>
+        <circle cx="206" cy="146" r="3" fill="#FCD34D"/>
+        <g stroke="#22C55E" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <path d="M244 94 q32 6 30 32"/><path d="M267 120 L274 131 L281 120"/>
+        </g>
+        <rect x="248" y="132" width="58" height="38" rx="8" fill="#F1F5F9" stroke="#475569" stroke-width="3"/>
+        <circle cx="277" cy="151" r="12" fill="#fff" stroke="#475569" stroke-width="3"/>
+        <g stroke="#16A34A" stroke-width="3.6" stroke-linecap="round">
+          <path d="M277 151 L277 142"/><path d="M277 151 L285 157"/><path d="M277 151 L269 157"/>
+        </g>
+        <g stroke="#FB923C" stroke-width="4" stroke-linecap="round" opacity=".9">
+          <path d="M54 152 q7 -10 0 -18"/><path d="M72 152 q7 -10 0 -18"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="trio">
+      <div class="trio-item">
+        <div class="t-ico">
+          <span class="t-no">1</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+        </div>
+        <div class="t-title">정부지원</div>
+        <div class="t-desc">설치비 70%<br>지원</div>
+      </div>
+      <div class="trio-item">
+        <div class="t-ico">
+          <span class="t-no">2</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+        </div>
+        <div class="t-title">태양광＋히트펌프</div>
+        <div class="t-desc">한 번에<br>정리</div>
+      </div>
+      <div class="trio-item">
+        <div class="t-ico">
+          <span class="t-no">3</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l2 2 4-4"/><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4"/></svg>
+        </div>
+        <div class="t-title">무료 진단</div>
+        <div class="t-desc">얼마 아끼는지<br>계산</div>
+      </div>
+    </div>
+
+    <a class="btn btn-call" href="tel:010-0000-0000">
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+      지금 전화 상담하기
+    </a>
+
+    <div class="urgency">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+      예산이 다 쓰이면 그해 접수는 마감됩니다
+    </div>
+    <p class="hero-foot">☎ 010-0000-0000 · 상담과 방문 진단은 무료입니다<br>설치하지 않으셔도 괜찮습니다</p>
+  </div>
+</section>
+
+<!-- ================= 하는 일 두 가지 ================= -->
+<section id="menu" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        저희가 하는 일
+      </span>
+      <h2>딱 두 가지만<br>제대로 합니다</h2>
+      <p class="sec-sub">궁금하신 쪽을 눌러 보세요.</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar pv reveal">
+        <div class="p-art">
+          <svg viewBox="0 0 100 100" role="img" aria-label="태양광 패널 그림">
+            <circle cx="50" cy="50" r="48" fill="#FFF7ED"/>
+            <circle cx="34" cy="30" r="11" fill="#FCD34D"/>
+            <g stroke="#F59E0B" stroke-width="3.2" stroke-linecap="round">
+              <path d="M34 13 L34 8"/><path d="M34 52 L34 47"/>
+              <path d="M17 30 L12 30"/><path d="M56 30 L51 30"/>
+              <path d="M22 18 L19 15"/><path d="M46 42 L49 45"/>
+            </g>
+            <g transform="rotate(-18 58 66)">
+              <rect x="30" y="52" width="58" height="30" rx="3" fill="#1E40AF" stroke="#1E3A8A" stroke-width="3.2"/>
+              <g stroke="#93C5FD" stroke-width="2.6">
+                <line x1="49" y1="52" x2="49" y2="82"/><line x1="68" y1="52" x2="68" y2="82"/>
+                <line x1="30" y1="67" x2="88" y2="67"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="p-kicker">지붕에 얹는</div>
+        <h3>태양광</h3>
+        <p>전기를 직접 만들어 씁니다. 전기료를 줄이는 것은 물론, 지붕을 빌려주거나 전기를 팔아 돈을 벌 수도 있습니다.</p>
+        <a class="p-link" href="#solar">태양광 보기 ↓</a>
+      </div>
+
+      <div class="pillar hp reveal">
+        <div class="p-art">
+          <svg viewBox="0 0 100 100" role="img" aria-label="히트펌프 실외기 그림">
+            <circle cx="50" cy="50" r="48" fill="#F0FDF4"/>
+            <rect x="24" y="32" width="52" height="44" rx="9" fill="#fff" stroke="#334155" stroke-width="3.4"/>
+            <circle cx="50" cy="54" r="14" fill="#fff" stroke="#334155" stroke-width="3.4"/>
+            <g stroke="#16A34A" stroke-width="4.2" stroke-linecap="round">
+              <path d="M50 54 L50 42"/><path d="M50 54 L60 61"/><path d="M50 54 L40 61"/>
+            </g>
+            <circle cx="50" cy="54" r="3" fill="#334155"/>
+            <g stroke="#22C55E" stroke-width="4" stroke-linecap="round" fill="none">
+              <path d="M94 54 L82 54"/><path d="M87 48 L82 54 L87 60"/>
+              <path d="M6 54 L18 54"/><path d="M13 48 L18 54 L13 60"/>
+            </g>
+          </svg>
+        </div>
+        <div class="p-kicker">보일러를 대신하는</div>
+        <h3>히트펌프</h3>
+        <p>기름·가스를 태우지 않고 난방합니다. 기름보일러 쓰던 집이 바꾸면 난방비가 절반 아래로 내려갑니다.</p>
+        <a class="p-link" href="#heatpump">히트펌프 보기 ↓</a>
+      </div>
+    </div>
+
+    <div class="banner reveal">
+      <h3>둘을 같이 하면 가장 좋습니다</h3>
+      <p>태양광이 만든 전기로 히트펌프를 돌리면 난방비와 전기료가 한꺼번에 줄어듭니다. 게다가 <b>2026년 히트펌프 설치비 70% 지원은 태양광이 설치된 단독주택이 대상</b>이라, 태양광을 먼저 하는 것이 순서상 유리합니다.</p>
+      <a class="p-link" href="#support">정부지원금 보기 ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 태양광 ================= -->
+<section id="solar" class="soft">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow sun">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+        태양광
+      </span>
+      <h2>놀고 있는 지붕이<br><span class="s">돈이 됩니다</span></h2>
+      <p class="sec-sub">쓰는 방법이 세 가지입니다. 집 사정에 맞는 쪽으로 골라 드립니다.</p>
+    </div>
+
+    <div class="reveal" style="background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:20px 14px;margin-bottom:26px;box-shadow:var(--sh-sm);">
+      <svg viewBox="0 0 340 205" role="img" aria-label="지붕 태양광에서 만든 전기가 집에서 쓰이고 남은 것은 한전으로 보내지는 그림">
+        <circle cx="46" cy="38" r="20" fill="#FCD34D"/>
+        <g stroke="#F59E0B" stroke-width="4.5" stroke-linecap="round">
+          <path d="M46 8 L46 3"/><path d="M46 73 L46 78"/>
+          <path d="M16 38 L11 38"/><path d="M76 38 L81 38"/>
+          <path d="M24 16 L20 12"/><path d="M68 60 L72 64"/>
+          <path d="M68 16 L72 12"/><path d="M24 60 L20 64"/>
+        </g>
+        <g stroke="#F59E0B" stroke-width="4.5" stroke-linecap="round" fill="none">
+          <path d="M76 54 L120 88"/><path d="M110 84 L121 89 L116 78"/>
+        </g>
+        <rect x="0" y="178" width="340" height="27" rx="8" fill="#FEF3C7"/>
+        <rect x="98" y="124" width="128" height="54" rx="6" fill="#fff" stroke="#334155" stroke-width="3.4"/>
+        <path d="M86 126 L162 80 L238 126 Z" fill="#F97316" stroke="#EA580C" stroke-width="3" stroke-linejoin="round"/>
+        <g transform="rotate(-31 141 102)">
+          <rect x="111" y="90" width="64" height="25" rx="3" fill="#1E40AF" stroke="#1E3A8A" stroke-width="3"/>
+          <g stroke="#93C5FD" stroke-width="2.2">
+            <line x1="132" y1="90" x2="132" y2="115"/><line x1="153" y1="90" x2="153" y2="115"/>
+            <line x1="111" y1="102" x2="175" y2="102"/>
+          </g>
+        </g>
+        <rect x="113" y="140" width="33" height="28" rx="4" fill="#FCD34D" stroke="#D97706" stroke-width="3"/>
+        <rect x="175" y="146" width="29" height="32" rx="4" fill="#78350F"/>
+        <text x="162" y="199" text-anchor="middle" font-size="15" font-weight="800" fill="#C2410C" font-family="Pretendard, sans-serif">① 우리 집이 씁니다</text>
+        <g stroke="#16A34A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+          <path d="M238 116 L280 116"/><path d="M270 108 L281 116 L270 124"/>
+        </g>
+        <text x="292" y="102" text-anchor="middle" font-size="14" font-weight="800" fill="#16A34A" font-family="Pretendard, sans-serif">남은 건</text>
+        <rect x="294" y="124" width="9" height="54" fill="#94A3B8"/>
+        <rect x="280" y="130" width="37" height="7" rx="3" fill="#94A3B8"/>
+        <rect x="284" y="144" width="29" height="6" rx="3" fill="#94A3B8"/>
+        <text x="298" y="199" text-anchor="middle" font-size="15" font-weight="800" fill="#16A34A" font-family="Pretendard, sans-serif">② 한전으로</text>
+      </svg>
+    </div>
+
+    <div class="use reveal">
+      <div class="u-head">
+        <div class="u-no">1</div>
+        <h3>우리 집 전기료 줄이기</h3>
+      </div>
+      <p>낮에 지붕에서 만든 전기를 집에서 바로 씁니다. 쓰고 남은 전기는 한전으로 넘어갔다가, 밤에 쓴 전기요금에서 그만큼 빼 줍니다. 그래도 남으면 다음 달로 넘어갑니다.</p>
+      <div class="u-fact">
+        3킬로와트를 얹은 집은 한 달에 <b>약 315킬로와트시</b>를 만듭니다.<br>
+        전기요금이 <b>월 4,330원</b>까지 내려간 사례도 있습니다.
+      </div>
+      <div class="u-who">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        <span>이런 분께 : 우리 집 전기요금만 줄이면 되는 보통 가정</span>
+      </div>
+    </div>
+
+    <div class="use reveal">
+      <div class="u-head">
+        <div class="u-no">2</div>
+        <h3>지붕만 빌려주고 임대료 받기</h3>
+      </div>
+      <p>설치비를 한 푼도 안 내셔도 됩니다. 업체가 자기 돈으로 지붕에 태양광을 얹고, 지붕 주인은 <b>자리값(임대료)</b>을 받습니다. 보통 20년 계약이고, 기간이 끝나면 설비를 넘겨받습니다.</p>
+      <div class="u-fact">
+        내 돈 <b>0원</b>으로 시작합니다.<br>
+        축사·창고·공장처럼 <b>지붕이 넓을수록</b> 받는 돈이 커집니다.
+      </div>
+      <div class="u-who">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        <span>이런 분께 : 목돈 들이기는 부담스럽고, 넓은 지붕이 놀고 있는 분</span>
+      </div>
+    </div>
+
+    <div class="use reveal">
+      <div class="u-head">
+        <div class="u-no">3</div>
+        <h3>전기를 팔아서 돈 벌기</h3>
+      </div>
+      <p>내 이름으로 발전소를 등록해 만든 전기를 전부 파는 방법입니다. <b>고정가격계약</b>에 뽑히면 <b>20년 동안 값을 미리 정해 놓고</b> 사 주기 때문에, 전기값이 오르내려도 수입이 흔들리지 않습니다.</p>
+      <div class="u-fact">
+        2026년 계약 상한가 : <b>1킬로와트시당 147.7원</b> (육지 기준)<br>
+        입찰로 뽑기 때문에 <b>신청한다고 다 되는 것은 아닙니다.</b>
+      </div>
+      <div class="u-who" style="color:var(--s-700);background:var(--s-50);border-radius:12px;padding:12px 14px;align-items:flex-start;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 9v5M12 17.5v.5"/><path d="M10.3 3.9L2.6 17a2 2 0 001.7 3h15.4a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+        <span>전기를 파는 제도는 2027년에 크게 바뀔 예정입니다. 지금 상황에 맞는 방법을 상담 때 알려 드립니다.</span>
+      </div>
+      <div class="u-who">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        <span>이런 분께 : 밭·논·축사가 있고, 노후 수입을 만들고 싶은 분</span>
+      </div>
+    </div>
+
+    <p class="note reveal">※ 발전량과 수익은 지붕 방향·기울기·그늘·지역 일조량에 따라 달라집니다. 위 숫자는 일반적인 예시입니다.</p>
+  </div>
+</section>
+
+<!-- ================= 히트펌프 ================= -->
+<section id="heatpump">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 3v18M5 10l7-7 7 7"/></svg>
+        히트펌프
+      </span>
+      <h2>기름 넣던 돈,<br><span class="g">이만큼 남습니다</span></h2>
+      <p class="sec-sub">33평 주택, 겨울 넉 달 난방 기준입니다.</p>
+    </div>
+
+    <div class="barlist reveal">
+      <div class="bl-title">겨울 한 철(넉 달) 난방비 비교</div>
+      <div class="bar-row">
+        <div class="bar-top"><span class="bar-name">기름보일러</span><span class="bar-val">180만원</span></div>
+        <div class="bar-track"><div class="bar-fill" data-w="100"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-top"><span class="bar-name">가스보일러</span><span class="bar-val">100만원</span></div>
+        <div class="bar-track"><div class="bar-fill mid" data-w="56"></div></div>
+      </div>
+      <div class="bar-row hi">
+        <div class="bar-top"><span class="bar-name">히트펌프</span><span class="bar-val">72만원</span></div>
+        <div class="bar-track"><div class="bar-fill good" data-w="40"></div></div>
+      </div>
+    </div>
+
+    <div class="stats reveal" style="margin-top:18px;">
+      <div class="stat">
+        <div class="v">108<small>만원</small></div>
+        <div class="k">해마다 남는 돈</div>
+      </div>
+      <div class="stat">
+        <div class="v">60<small>%</small></div>
+        <div class="k">난방비 절감률</div>
+      </div>
+      <div class="stat">
+        <div class="v">4<small>계절</small></div>
+        <div class="k">냉방까지 사용</div>
+      </div>
+    </div>
+
+    <h3 class="reveal" style="text-align:center;margin:46px 0 18px;">기름보일러와 무엇이 다른가요?</h3>
+    <div class="vs reveal">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col" style="text-align:left;padding-left:14px;">항목</th>
+            <th scope="col">기름보일러</th>
+            <th scope="col" class="good">히트펌프</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">난방비</th>
+            <td class="bad"><span class="mk x">✕</span>월 45만원</td>
+            <td class="good"><span class="mk o">✓</span>월 18만원</td>
+          </tr>
+          <tr>
+            <th scope="row">연료 주문</th>
+            <td class="bad"><span class="mk x">✕</span>기름 배달</td>
+            <td class="good"><span class="mk o">✓</span>필요 없음</td>
+          </tr>
+          <tr>
+            <th scope="row">냄새·그을음</th>
+            <td class="bad"><span class="mk x">✕</span>있음</td>
+            <td class="good"><span class="mk o">✓</span>없음</td>
+          </tr>
+          <tr>
+            <th scope="row">여름 냉방</th>
+            <td class="bad"><span class="mk x">✕</span>안 됨</td>
+            <td class="good"><span class="mk o">✓</span>됨</td>
+          </tr>
+          <tr>
+            <th scope="row">정부지원</th>
+            <td class="bad"><span class="mk x">✕</span>없음</td>
+            <td class="good"><span class="mk o">✓</span>설치비 70%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note reveal">※ 집 크기, 단열 상태, 사용 습관에 따라 달라질 수 있습니다. 정확한 금액은 무료로 계산해 드립니다.</p>
+
+    <!-- 원리 -->
+    <h3 class="reveal" style="text-align:center;margin:52px 0 18px;">불을 때지 않는데 어떻게 따뜻해지나요?</h3>
+
+    <div class="analogy reveal">
+      <div class="quote">에어컨을 <u>거꾸로 돌리는 것</u>입니다</div>
+      <svg viewBox="0 0 320 170" role="img" aria-label="에어컨은 더운 바람을 밖으로, 히트펌프는 따뜻한 열을 안으로 보내는 비교 그림" style="margin:18px auto 4px;">
+        <text x="76" y="18" text-anchor="middle" font-size="15" font-weight="800" fill="#64748B" font-family="Pretendard, sans-serif">여름 에어컨</text>
+        <rect x="16" y="30" width="120" height="112" rx="14" fill="#EFF6FF" stroke="#93C5FD" stroke-width="3"/>
+        <text x="76" y="60" text-anchor="middle" font-size="14" font-weight="700" fill="#1D4ED8" font-family="Pretendard, sans-serif">집 안</text>
+        <g stroke="#2563EB" stroke-width="5" stroke-linecap="round" fill="none">
+          <path d="M116 86 L44 86"/><path d="M56 76 L44 86 L56 96"/>
+        </g>
+        <text x="80" y="116" text-anchor="middle" font-size="14" font-weight="800" fill="#2563EB" font-family="Pretendard, sans-serif">시원한 바람</text>
+        <text x="244" y="18" text-anchor="middle" font-size="15" font-weight="800" fill="#64748B" font-family="Pretendard, sans-serif">겨울 히트펌프</text>
+        <rect x="184" y="30" width="120" height="112" rx="14" fill="#FFF7ED" stroke="#FDBA74" stroke-width="3"/>
+        <text x="244" y="60" text-anchor="middle" font-size="14" font-weight="700" fill="#C2410C" font-family="Pretendard, sans-serif">집 안</text>
+        <g stroke="#EA580C" stroke-width="5" stroke-linecap="round" fill="none">
+          <path d="M204 86 L276 86"/><path d="M264 76 L276 86 L264 96"/>
+        </g>
+        <text x="244" y="116" text-anchor="middle" font-size="14" font-weight="800" fill="#EA580C" font-family="Pretendard, sans-serif">따뜻한 온기</text>
+        <line x1="160" y1="34" x2="160" y2="138" stroke="#E2E8F0" stroke-width="3" stroke-dasharray="6 7"/>
+        <text x="160" y="162" text-anchor="middle" font-size="14" font-weight="800" fill="#0F172A" font-family="Pretendard, sans-serif">방향만 반대입니다</text>
+      </svg>
+      <p>에어컨은 집 안의 더운 기운을 밖으로 퍼냅니다.<br>히트펌프는 반대로, 바깥의 따뜻한 기운을 집 안으로 퍼 옵니다.</p>
+    </div>
+
+    <div class="flow-step reveal">
+      <div class="art">
+        <svg viewBox="0 0 100 100" role="img" aria-label="바깥 공기에서 열을 모으는 그림">
+          <circle cx="50" cy="50" r="46" fill="#F0FDF4"/>
+          <rect x="26" y="30" width="48" height="42" rx="8" fill="#fff" stroke="#334155" stroke-width="3.4"/>
+          <circle cx="50" cy="51" r="13" fill="#fff" stroke="#334155" stroke-width="3.4"/>
+          <g stroke="#16A34A" stroke-width="4" stroke-linecap="round">
+            <path d="M50 51 L50 40"/><path d="M50 51 L59.5 57"/><path d="M50 51 L40.5 57"/>
+          </g>
+          <circle cx="50" cy="51" r="3" fill="#334155"/>
+          <g stroke="#22C55E" stroke-width="4" stroke-linecap="round" fill="none">
+            <path d="M92 51 L79 51"/><path d="M84 45 L79 51 L84 57"/>
+            <path d="M8 51 L21 51"/><path d="M16 45 L21 51 L16 57"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <span class="no">1단계</span>
+        <h3>바깥 공기를 빨아들입니다</h3>
+        <p>추운 날에도 공기 속에는 열이 숨어 있습니다.</p>
+      </div>
+    </div>
+    <div class="arrow-down"><svg width="30" height="24" viewBox="0 0 34 26" aria-hidden="true"><path d="M17 2 L17 19 M9 12 L17 21 L25 12" fill="none" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+    <div class="flow-step reveal">
+      <div class="art">
+        <svg viewBox="0 0 100 100" role="img" aria-label="열을 꾹 눌러 뜨겁게 만드는 그림">
+          <circle cx="50" cy="50" r="46" fill="#FFF7ED"/>
+          <rect x="30" y="38" width="40" height="34" rx="7" fill="#fff" stroke="#334155" stroke-width="3.4"/>
+          <g stroke="#EA580C" stroke-width="4.5" stroke-linecap="round" fill="none">
+            <path d="M50 14 L50 30"/><path d="M42 23 L50 31 L58 23"/>
+          </g>
+          <path d="M40 62 L48 50 L54 58 L62 44" fill="none" stroke="#EA580C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="62" cy="44" r="3.6" fill="#EA580C"/>
+          <g stroke="#FB923C" stroke-width="3.5" stroke-linecap="round">
+            <path d="M34 84 q6 -8 0 -14"/><path d="M50 84 q6 -8 0 -14"/><path d="M66 84 q6 -8 0 -14"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <span class="no">2단계</span>
+        <h3>꾹 눌러서 뜨겁게 만듭니다</h3>
+        <p>모은 열을 눌러 주면 온도가 훨씬 높아집니다.</p>
+      </div>
+    </div>
+    <div class="arrow-down"><svg width="30" height="24" viewBox="0 0 34 26" aria-hidden="true"><path d="M17 2 L17 19 M9 12 L17 21 L25 12" fill="none" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+    <div class="flow-step reveal">
+      <div class="art">
+        <svg viewBox="0 0 100 100" role="img" aria-label="뜨거운 열을 물에 옮기는 그림">
+          <circle cx="50" cy="50" r="46" fill="#EFF6FF"/>
+          <rect x="30" y="26" width="40" height="52" rx="11" fill="#fff" stroke="#334155" stroke-width="3.4"/>
+          <path d="M32 56 q9 -8 19 0 q9 8 17 0 v18 a8 8 0 0 1 -8 6 h-22 a8 8 0 0 1 -6 -6 z" fill="#93C5FD"/>
+          <path d="M36 42 q7 -9 14 0 q7 9 14 0" fill="none" stroke="#EA580C" stroke-width="4.5" stroke-linecap="round"/>
+          <g stroke="#FB923C" stroke-width="3.5" stroke-linecap="round">
+            <path d="M42 20 q5 -7 0 -13"/><path d="M58 20 q5 -7 0 -13"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <span class="no">3단계</span>
+        <h3>그 열로 물을 데웁니다</h3>
+        <p>보일러가 기름으로 하던 일을, 공기에서 얻은 열로 합니다.</p>
+      </div>
+    </div>
+    <div class="arrow-down"><svg width="30" height="24" viewBox="0 0 34 26" aria-hidden="true"><path d="M17 2 L17 19 M9 12 L17 21 L25 12" fill="none" stroke="#CBD5E1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+
+    <div class="flow-step last reveal">
+      <div class="art">
+        <svg viewBox="0 0 100 100" role="img" aria-label="따뜻한 물이 방바닥을 도는 그림">
+          <circle cx="50" cy="50" r="46" fill="#fff"/>
+          <path d="M18 46 L50 22 L82 46 Z" fill="#F97316"/>
+          <rect x="26" y="46" width="48" height="34" rx="6" fill="#FFFBEB" stroke="#334155" stroke-width="3.4"/>
+          <path d="M32 72 h36 M32 72 q-4 -6 0 -10 h36 q4 -6 0 -10 h-36" fill="none" stroke="#EA580C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <g stroke="#FB923C" stroke-width="3.5" stroke-linecap="round">
+            <path d="M40 92 q6 -8 0 -12"/><path d="M60 92 q6 -8 0 -12"/>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <span class="no">4단계</span>
+        <h3>방바닥이 따뜻해집니다</h3>
+        <p>쓰던 방바닥 배관을 그대로 씁니다. 뜯어고칠 것 없습니다.</p>
+      </div>
+    </div>
+
+    <p class="note reveal">불을 때는 게 아니라 <b>있는 열을 옮기는 것</b>이라, 같은 온도를 만드는 데 돈이 훨씬 적게 듭니다.</p>
+  </div>
+</section>
+
+<!-- ================= 정부지원금 ================= -->
+<section id="support" class="soft">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="13" rx="2"/><circle cx="12" cy="12.5" r="2.5"/></svg>
+        정부지원금
+      </span>
+      <h2>설치비의 <span class="g">70%</span>를<br>나라에서 냅니다</h2>
+      <p class="sec-sub">2026년, 정부가 난방을 전기로 바꾸는 첫해로 정하면서 지원이 크게 늘었습니다.</p>
+    </div>
+
+    <div class="fund reveal">
+      <div class="f-cap">히트펌프 설치비 지원</div>
+      <div class="f-big">70<small>%</small></div>
+      <div class="f-note">최대 980만원까지 지원받습니다</div>
+      <p style="font-size:0.98rem;color:var(--ink-3);font-weight:600;margin-top:8px;">설치비 1,400만원 기준 · 내 돈은 420만원</p>
+
+      <div class="f-bars">
+        <div class="bar-row hi">
+          <div class="bar-top"><span class="bar-name">나라가 냅니다 (국비)</span><span class="bar-val">40%</span></div>
+          <div class="bar-track"><div class="bar-fill good" data-w="40"></div></div>
+        </div>
+        <div class="bar-row hi">
+          <div class="bar-top"><span class="bar-name">지자체가 냅니다 (지방비)</span><span class="bar-val">30%</span></div>
+          <div class="bar-track"><div class="bar-fill good" data-w="30"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-top"><span class="bar-name">내가 냅니다</span><span class="bar-val">30%</span></div>
+          <div class="bar-track"><div class="bar-fill slate" data-w="30"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cond reveal">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 9v5M12 17.5v.5"/><path d="M10.3 3.9L2.6 17a2 2 0 001.7 3h15.4a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+        지붕에 태양광이 있어야 합니다
+      </h3>
+      <p>2026년 히트펌프 지원은 <b>3킬로와트 이상 태양광을 설치했거나, 설치할 예정인 단독·연립주택</b>이 대상입니다. 태양광이 아직 없으셔도 <b>같이 신청하면 됩니다.</b> 저희가 둘 다 하니 한 번에 정리해 드립니다.</p>
+    </div>
+
+    <div class="reveal" style="background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:26px 24px;margin-top:18px;">
+      <h3 style="margin-bottom:14px;">지원받으시려면 이런 조건이 맞아야 합니다</h3>
+      <ul style="list-style:none;">
+        <li style="position:relative;padding-left:26px;margin-bottom:10px;font-size:1.02rem;color:var(--ink-2);font-weight:500;"><span style="position:absolute;left:0;color:var(--g-600);font-weight:900;">✓</span>3kW 이상 태양광이 있거나, 함께 설치할 것</li>
+        <li style="position:relative;padding-left:26px;margin-bottom:10px;font-size:1.02rem;color:var(--ink-2);font-weight:500;"><span style="position:absolute;left:0;color:var(--g-600);font-weight:900;">✓</span>단독주택 또는 연립주택</li>
+        <li style="position:relative;padding-left:26px;margin-bottom:10px;font-size:1.02rem;color:var(--ink-2);font-weight:500;"><span style="position:absolute;left:0;color:var(--g-600);font-weight:900;">✓</span>집주인 본인 또는 임대차 계약을 맺은 세대주</li>
+        <li style="position:relative;padding-left:26px;margin-bottom:10px;font-size:1.02rem;color:var(--ink-2);font-weight:500;"><span style="position:absolute;left:0;color:var(--g-600);font-weight:900;">✓</span>히트펌프와 물탱크를 놓을 자리가 있을 것</li>
+        <li style="position:relative;padding-left:26px;font-size:1.02rem;color:var(--ink-2);font-weight:500;"><span style="position:absolute;left:0;color:var(--red);font-weight:900;">✕</span>최근 3년 안에 저녹스보일러 보조금을 받은 집은 제외</li>
+      </ul>
+    </div>
+
+    <div class="alert reveal">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        먼저 확인하셔야 할 것
+      </h3>
+      <ul>
+        <li><b>지원 가능한 지역이 해마다 정해집니다.</b> 참여하는 지자체가 계속 늘고 있어, 올해 우리 지역이 되는지는 <b>문의 주시면 확인해서 안내</b>해 드립니다</li>
+        <li>예산이 다 쓰이면 그해 신청은 바로 마감됩니다</li>
+        <li>전화 한 통 주시면 올해 우리 집이 되는지 바로 알려 드립니다</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 진행 절차 ================= -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>
+        진행 절차
+      </span>
+      <h2>전화 한 통이면<br>나머지는 저희가 합니다</h2>
+    </div>
+
+    <div class="steps reveal">
+      <div class="step">
+        <div class="s-tile">
+          <span class="s-no">1</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 8.4 8.4 0 01-3.8-.9L3 21l2-5.2A8.4 8.4 0 0112 3a8.4 8.4 0 019 8.5z"/></svg>
+        </div>
+        <h3>전화 상담</h3>
+        <p>우리 지역·우리 집이<br>대상인지 확인</p>
+      </div>
+      <div class="step">
+        <div class="s-tile">
+          <span class="s-no">2</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l2 2 4-4"/><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M8 2v4M16 2v4"/></svg>
+        </div>
+        <h3>무료 방문진단</h3>
+        <p>지붕·보일러<br>직접 확인</p>
+      </div>
+      <div class="step">
+        <div class="s-tile">
+          <span class="s-no">3</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H7a2 2 0 00-2 2v16a2 2 0 002 2h10a2 2 0 002-2V7z"/><path d="M14 2v5h5M9 13h6M9 17h4"/></svg>
+        </div>
+        <h3>서류 대행</h3>
+        <p>복잡한 신청<br>저희가 처리</p>
+      </div>
+      <div class="step">
+        <div class="s-tile">
+          <span class="s-no">4</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.6 1.6 0 00-1.8-.3 1.6 1.6 0 00-1 1.5V21a2 2 0 11-4 0v-.1A1.6 1.6 0 007 19.4a1.6 1.6 0 00-1.8.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.6 1.6 0 00.3-1.8 1.6 1.6 0 00-1.5-1H1a2 2 0 110-4h.1A1.6 1.6 0 002.6 7a1.6 1.6 0 00-.3-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.6 1.6 0 001.8.3H7a1.6 1.6 0 001-1.5V1a2 2 0 114 0v.1a1.6 1.6 0 001 1.5 1.6 1.6 0 001.8-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.6 1.6 0 00-.3 1.8V7a1.6 1.6 0 001.5 1H21a2 2 0 110 4h-.1a1.6 1.6 0 00-1.5 1z"/></svg>
+        </div>
+        <h3>시공·관리</h3>
+        <p>설치 후에도<br>계속 관리</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 시공 사례 (실적 생기면 여기에 다시 추가) =================
+     CSS(.case / .case-frame / .case-body / .case-tiles / .tile)는 그대로 두었습니다.
+     사진 4장 + 성과 타일 2개 구조였습니다. 되살리실 때 말씀해 주세요.
+================================================================================= -->
+<!-- ================= FAQ ================= -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 015 .5c0 1.7-2.5 2-2.5 3.5M12 17v.5"/></svg>
+        자주 묻는 질문
+      </span>
+      <h2>이런 것들을<br>많이 물어보십니다</h2>
+    </div>
+
+    <details class="faq reveal">
+      <summary>
+        <span class="q">Q</span>
+        <span>추운 날에도 따뜻하게 되나요?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="a">됩니다. 다만 솔직히 말씀드리면, <b>바깥이 아주 추워질수록 효율은 떨어집니다.</b> 그래서 정부 보급사업도 <b>비교적 따뜻한 지역부터</b> 시작했습니다. 저희는 정부가 성능을 확인한 제품(삼성전자·LG전자·대성히트에너시스)만 쓰고, 댁의 위치와 단열 상태를 보고 <b>맞지 않으면 맞지 않는다고 말씀드립니다.</b></div>
+    </details>
+
+    <details class="faq reveal">
+      <summary>
+        <span class="q">Q</span>
+        <span>방바닥 배관을 다 뜯어야 하나요?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="a">아닙니다. <b>지금 쓰시는 방바닥 배관을 그대로 씁니다.</b> 보일러 자리에 있던 기름보일러를 빼고 히트펌프를 연결하는 공사라, 집을 뜯어고칠 일이 없습니다.</div>
+    </details>
+
+    <details class="faq reveal">
+      <summary>
+        <span class="q">Q</span>
+        <span>전기료가 오히려 많이 나오지 않나요?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="a">좋은 질문입니다. 전기는 분명히 더 씁니다. 다만 <b>기름값이 통째로 없어지기 때문에</b> 합쳐 보면 적게 나옵니다.<br><br>그동안은 전기를 많이 쓰면 요금이 껑충 뛰는 <b>누진제</b>가 걸림돌이었는데, 정부가 <b>히트펌프를 쓰는 집에는 누진제를 적용하지 않는 별도 요금제를 만들기로</b> 했습니다. 여기에 지붕 태양광까지 얹으면 늘어난 전기를 직접 만들어 쓰게 됩니다.</div>
+    </details>
+
+    <details class="faq reveal">
+      <summary>
+        <span class="q">Q</span>
+        <span>지원금 서류가 복잡하지 않나요?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="a"><b>서류는 저희가 다 준비해서 대신 넣습니다.</b> 어르신께서는 도장 찍으실 것만 확인해 주시면 됩니다. 관공서에 직접 가실 일은 없습니다.</div>
+    </details>
+
+    <details class="faq reveal">
+      <summary>
+        <span class="q">Q</span>
+        <span>공사는 며칠이나 걸리나요?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="a">보통 <b>하루에서 이틀</b>이면 끝납니다. 태양광과 히트펌프를 같이 하시면 조금 더 걸리지만, 공사하는 동안 집을 비우실 필요는 없습니다.</div>
+    </details>
+
+    <details class="faq reveal">
+      <summary>
+        <span class="q">Q</span>
+        <span>고장 나면 어떻게 하나요?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="a">제조사 보증이 기본으로 들어가고, 저희가 <b>설치 후에도 계속 관리</b>해 드립니다. 전화 주시면 바로 나갑니다.</div>
+    </details>
+
+    <details class="faq reveal">
+      <summary>
+        <span class="q">Q</span>
+        <span>상담만 받아봐도 되나요?</span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </summary>
+      <div class="a">물론입니다. <b>상담도 방문 진단도 무료</b>이고, 설치하지 않으셔도 전혀 부담 없습니다. 우리 집이 지원 대상인지만 알아보셔도 됩니다.</div>
+    </details>
+  </div>
+</section>
+
+<!-- ================= 마무리 CTA ================= -->
+<section class="final">
+  <div class="wrap">
+    <span class="eyebrow">무료 상담</span>
+    <h2>망설이지 마시고<br>물어만 보세요</h2>
+    <p class="sec-sub">우리 집이 지원 대상인지,<br>태양광과 히트펌프 중 뭐가 먼저인지<br>전화 한 통이면 알려 드립니다.</p>
+    <a class="btn btn-call" href="tel:010-0000-0000">
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+      010-0000-0000
+    </a>
+    <a class="btn btn-kakao" href="https://pf.kakao.com/_카톡채널ID" target="_blank" rel="noopener">
+      <svg class="ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.9 3 2.8 6.3 2.8 10.3c0 2.6 1.7 4.9 4.3 6.2-.2.7-.7 2.5-.8 2.9-.1.5.2.5.4.4.2-.1 2.7-1.8 3.7-2.5.5.1 1.1.1 1.6.1 5.1 0 9.2-3.3 9.2-7.3S17.1 3 12 3z"/></svg>
+      카카오톡 상담
+    </a>
+    <p class="f-note">상담시간 : 매일 오전 8시 ~ 오후 8시</p>
+  </div>
+</section>
+
+<!-- ================= 푸터 ================= -->
+<footer>
+  <div class="wrap">
+    <div class="f-brand">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="11" fill="#16A34A"/>
+        <path d="M12 25 L20 12 L28 25 Z" fill="#BBF7D0"/>
+        <circle cx="20" cy="27" r="4.5" fill="#fff"/>
+      </svg>
+      <span class="name">태양광·히트펌프 설치</span>
+    </div>
+    <p class="f-tag">태양광·히트펌프 설치 · 정부지원 신청 대행</p>
+
+    <!-- 연락 카드 -->
+    <div class="f-contact">
+      <a class="f-tel" href="tel:010-0000-0000">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.2 1l-2.3 2.2z"/></svg>
+        </span>
+        <span>
+          <span class="k">전화 상담 (무료)</span>
+          <span class="v">010-0000-0000</span>
+        </span>
+      </a>
+      <div class="f-line">
+        <span class="lk">상담시간</span>
+        <span class="lv">매일 오전 8시 ~ 오후 8시<br>(공휴일도 받습니다)</span>
+      </div>
+      <div class="f-line">
+        <span class="lk">시공 지역</span>
+        <span class="lv"><b>전국</b> · 방문 진단 무료<br>정부지원 가능 지역은 문의 후 안내</span>
+      </div>
+      <div class="f-line">
+        <span class="lk">카카오톡</span>
+        <span class="lv"><a href="https://pf.kakao.com/_카톡채널ID" target="_blank" rel="noopener" style="color:var(--g-700);font-weight:800;text-decoration:underline;">채널 상담 바로가기</a></span>
+      </div>
+    </div>
+
+    <!-- 빠른 이동 -->
+    <nav class="f-nav" aria-label="페이지 안내">
+      <a href="#solar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>태양광</a>
+      <a href="#heatpump"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>히트펌프</a>
+      <a href="#support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>정부지원금</a>
+      <a href="#process"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>진행 절차</a>
+      <a href="#faq"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>자주 묻는 질문</a>
+    </nav>
+
+    <p class="f-disc">
+      ※ 지원금(설치비 70%, 최대 980만원)은 2026년 기후에너지환경부 히트펌프 보급사업 기준이며,
+      지원 가능 지역과 조건은 해마다 달라지며 예산 소진 시 마감됩니다. 개별 문의 시 확인해 안내해 드립니다.
+      난방비·전기료 절감액과 수익은 주택 상태와 사용량에 따른 예시이며 실제와 다를 수 있습니다.
+      정확한 내용은 상담 시 안내해 드립니다.
+    </p>
+
+    <a class="to-top" href="#top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      맨 위로 올라가기
+    </a>
+
+    <p class="f-copy">© 2026 태양광·히트펌프 설치</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ---------- 스크롤 등장 + 막대 ---------- */
+  var items = [].slice.call(document.querySelectorAll('.reveal'));
+
+  function show(el){
+    el.classList.add('on');
+    var bars = el.querySelectorAll('.bar-fill');
+    for (var i = 0; i < bars.length; i++) {
+      bars[i].style.width = bars[i].getAttribute('data-w') + '%';
+    }
+  }
+  function showAll(){ for (var i = 0; i < items.length; i++) show(items[i]); }
+
+  /* 안전장치 ① : IntersectionObserver 를 못 쓰면 곧바로 전부 표시 */
+  if (!('IntersectionObserver' in window)) { showAll(); }
+  else {
+    var io = new IntersectionObserver(function(entries){
+      for (var i = 0; i < entries.length; i++) {
+        if (!entries[i].isIntersecting) continue;
+        show(entries[i].target);
+        io.unobserve(entries[i].target);
+      }
+    }, { threshold: 0, rootMargin: '0px 0px 120px 0px' });
+
+    for (var i = 0; i < items.length; i++) io.observe(items[i]);
+
+    /* 안전장치 ② : 4초 뒤에도 화면 안 요소가 안 나왔으면 전부 표시 */
+    setTimeout(function(){
+      var vh = window.innerHeight || 800, broken = false, stuck = 0;
+      for (var j = 0; j < items.length; j++) {
+        if (!items[j].classList.contains('on')) {
+          stuck++;
+          var r = items[j].getBoundingClientRect();
+          if (r.top < vh && r.bottom > 0) broken = true;
+        }
+      }
+      if (broken || stuck === items.length) { io.disconnect(); showAll(); }
+    }, 4000);
+  }
+
+  /* ---------- 데스크톱 우측 네비 활성 표시 ---------- */
+  var spyLinks = [].slice.call(document.querySelectorAll('.spy a'));
+  if (spyLinks.length && 'IntersectionObserver' in window) {
+    var map = {};
+    spyLinks.forEach(function(a){
+      var t = document.querySelector(a.getAttribute('href'));
+      if (t) map[t.id] = a;
+    });
+    var spyIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        spyLinks.forEach(function(a){ a.classList.remove('on'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('on');
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(map).forEach(function(id){
+      var t = document.getElementById(id);
+      if (t) spyIo.observe(t);
+    });
+  }
+})();
+</script>
+</body>
+</html>

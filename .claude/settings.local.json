@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(claude update *)",
+      "PowerShell(claude *)",
+      "PowerShell(\\(Get-Command claude\\).Source)",
+      "PowerShell($p = \\(Get-Command python -ErrorAction SilentlyContinue\\); if \\($p\\) { \"python: \" + $p.Source; python --version } else { \"no python\" }; $n = \\(Get-Command npx -ErrorAction SilentlyContinue\\); if \\($n\\) { \"npx: \" + $n.Source } else { \"no npx\" }21)",
+      "PowerShell(node \"C:\\\\Users\\\\computer\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-computer-Desktop-----\\\\21cc38c5-f47d-400e-bfa2-b8a7339b991d\\\\scratchpad\\\\serve.js\")",
+      "PowerShell($r = Invoke-WebRequest -Uri \"http://localhost:5173/\" -UseBasicParsing; \"status: $\\($r.StatusCode\\)\"; \"bytes: $\\($r.RawContentLength\\)\"; \"type: $\\($r.Headers['Content-Type']\\)\")",
+      "PowerShell(Get-Content *)",
+      "WebSearch",
+      "WebFetch(domain:www.asiae.co.kr)",
+      "WebFetch(domain:www.hydrogennews.co.kr)",
+      "WebFetch(domain:blog.haezoom.com)",
+      "WebFetch(domain:mcee.go.kr)"
+    ]
+  }
+}
