@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 도메인을 바꾸면 이 주소와 robots.txt, index.html 의 주소도 같이 바꾸세요. -->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://heatpump119.vercel.app/</loc>
     <lastmod>2026-11-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <image:image><image:loc>https://heatpump119.vercel.app/og-image.png</image:loc></image:image>
   </url>
 </urlset>
