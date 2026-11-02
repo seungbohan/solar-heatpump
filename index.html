@@ -104,6 +104,7 @@ h3{font-size:1.15rem;font-weight:800;color:var(--ink);letter-spacing:-0.03em;}
 .field{margin-top:26px;}
 .label{display:block;font-size:1.05rem;font-weight:800;color:var(--ink);margin-bottom:10px;}
 .seg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.seg.two{grid-template-columns:repeat(2,1fr);}
 .seg input{position:absolute;opacity:0;pointer-events:none;}
 .seg label{
   display:flex;align-items:center;justify-content:center;text-align:center;
@@ -363,7 +364,7 @@ footer a{color:var(--ink-2);font-weight:700;}
      "name": "한겨울에도 따뜻하게 되나요?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "됩니다. 한겨울용으로 나온 제품을 씁니다. 다만 아주 추운 날에는 효율이 떨어져 전기를 조금 더 씁니다. 계산기에서 효율을 2~3배로 넓게 잡은 이유입니다."
+      "text": "됩니다. 한겨울용으로 나온 제품을 씁니다. 다만 아주 추운 날에는 효율이 떨어져 전기를 조금 더 씁니다. 계산기에서 절감액을 범위로 보여 드리는 이유입니다."
      }
     },
     {
@@ -454,7 +455,7 @@ footer a{color:var(--ink-2);font-weight:700;}
 <section class="first" id="top">
   <div class="wrap">
     <h1>기름보일러를 히트펌프로<br><em>바꾸면 얼마 아낄까요?</em></h1>
-    <p class="sub">기름값만 넣어 보세요. 바로 계산해 드립니다.</p>
+    <p class="sub">난방·온수비만 넣어 보세요. 바로 계산해 드립니다.</p>
 
     <form id="calc" novalidate>
       <div class="field">
@@ -466,6 +467,16 @@ footer a{color:var(--ink-2);font-weight:700;}
           <label for="t-stay">숙박업</label>
           <input type="radio" name="type" id="t-bath" value="bath">
           <label for="t-bath">목욕탕</label>
+        </div>
+      </div>
+
+      <div class="field" id="fuel-field" hidden>
+        <span class="label" id="q-fuel">지금 어떤 보일러를 쓰세요?</span>
+        <div class="seg two" role="radiogroup" aria-labelledby="q-fuel">
+          <input type="radio" name="fuel" id="f-oil" value="oil" checked>
+          <label for="f-oil">기름보일러</label>
+          <input type="radio" name="fuel" id="f-gas" value="gas">
+          <label for="f-gas">가스보일러</label>
         </div>
       </div>
 
@@ -482,7 +493,7 @@ footer a{color:var(--ink-2);font-weight:700;}
       <p class="r-cap">히트펌프로 바꾸면 한 달에</p>
       <p class="r-big" id="r-big"></p>
       <div class="r-rows">
-        <div class="r-row"><span>지금 난방비 (기름보일러)</span><b id="r-now"></b></div>
+        <div class="r-row"><span id="r-now-name">지금 난방비 (기름보일러)</span><b id="r-now"></b></div>
         <div class="r-row"><span>히트펌프 난방비</span><b id="r-hp"></b></div>
         <div class="r-row"><span id="r-period-name">겨울 석 달이면</span><b id="r-period"></b></div>
       </div>
@@ -533,7 +544,7 @@ footer a{color:var(--ink-2);font-weight:700;}
           <tr><th>연료</th><td>등유·경유</td><td class="hp">전기 (바깥 공기의 열)</td></tr>
           <tr><th>기름 주문</th><td>떨어질 때마다 주문</td><td class="hp">필요 없음</td></tr>
           <tr><th>연기·냄새</th><td>있음</td><td class="hp">없음</td></tr>
-          <tr><th>난방비</th><td>기름값 따라 오르내림</td><td class="hp">기름값의 약 1/3~1/2 <small>(효율 2~3배 기준)</small></td></tr>
+          <tr><th>난방비</th><td>기름값 따라 오르내림</td><td class="hp">기름값의 약 40~50% <small>(절감 50~60% 기준)</small></td></tr>
           <tr><th>방바닥 배관</th><td>—</td><td class="hp">기존 배관 그대로 사용</td></tr>
           <tr><th>정부 지원</th><td>—</td><td class="hp">설치비 지원사업 있음</td></tr>
         </tbody>
@@ -662,7 +673,7 @@ footer a{color:var(--ink-2);font-weight:700;}
     <div class="faq">
       <details>
         <summary>한겨울에도 따뜻하게 되나요?</summary>
-        <div class="a">됩니다. 한겨울용으로 나온 제품을 씁니다. 다만 아주 추운 날에는 효율이 떨어져 전기를 조금 더 씁니다. 계산기에서 효율을 2~3배로 넓게 잡은 이유입니다.</div>
+        <div class="a">됩니다. 한겨울용으로 나온 제품을 씁니다. 다만 아주 추운 날에는 효율이 떨어져 전기를 조금 더 씁니다. 계산기에서 절감액을 범위로 보여 드리는 이유입니다.</div>
       </details>
       <details>
         <summary>전기 누진제 때문에 요금 폭탄 나오지 않나요?</summary>
