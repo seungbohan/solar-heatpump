@@ -7,32 +7,43 @@
   var KAKAO_URL = '';             // 카카오톡 채널 주소. 비워 두면 카톡 버튼이 숨겨집니다.
                                   // 사업자 인증 후 'https://pf.kakao.com/_VIxkWX/chat' 다시 넣기
 
-  /* 계산 기준 — 지금 연료비 대비 절감 비율 (하한, 상한) */
-  var FUELS = {
-    oil: { name: '기름보일러', bill: '기름값',   save: [0.5, 0.6] },  // 50~60% 절감
-    gas: { name: '가스보일러', bill: '가스요금', save: [0.4, 0.5] }   // 40~50% 절감
-  };
+  /* 계산 기준 */
+  var OIL_PRICE   = 208.4;  // 등유 원 / 1,000kcal (연료 열량 기준)
+  var BOILER_EFF  = 0.85;   // 기름보일러 효율
+  var COP_LOW     = 2;      // 히트펌프 효율 하한 (한파·고온수)
+  var COP_HIGH    = 3;      // 히트펌프 효율 상한
+  var GAS_LOW     = 1.5;    // 가스보일러 대비 히트펌프 효율 하한 (숙박업·목욕탕)
+  var GAS_HIGH    = 2;      // 가스보일러 대비 히트펌프 효율 상한
 
   var TYPES = {
     home: {
-      name: '가정집', period: '한겨울 한 달', fuels: ['oil'],
+      name: '가정집', label: '한겨울 한 달 기름값',
+      elec: 215,                  // 주택용 전기 1kWh (원, 고정 단가)
       months: 3, periodName: '겨울 석 달이면',
-      note: ''
+      basis: '가정집 기준: 등유 208.4원(1,000kcal당), 기름보일러 효율 85%, 히트펌프 효율 2~3배, 전기 1kWh당 215원으로 계산한 예상치입니다.'
     },
     stay: {
-      name: '숙박업', period: '한 달 평균', fuels: ['oil', 'gas'],
+      name: '숙박업', label: '한 달 평균 기름값', gasLabel: '한 달 평균 가스비', gas: true,
+      elec: 150,                  // 일반용(갑) 저압 겨울 전력량요금 + 부가 요금·세금
       months: 12, periodName: '1년이면',
-      note: ' 온수를 1년 내내 쓰는 것으로 보고 1년 값을 냈습니다.'
+      basis: '숙박업 기준: 등유 208.4원(1,000kcal당), 보일러 효율 85%, 히트펌프 효율 2~3배, 일반용 전기 1kWh당 150원(계약전력 기본요금 별도)으로 계산한 예상치입니다. 온수를 1년 내내 쓰는 것으로 보고 1년 값을 냈습니다.',
+      gasBasis: '숙박업 기준: 가스보일러 대비 히트펌프 효율 1.5~2배로 계산한 예상치입니다. 온수를 1년 내내 쓰는 것으로 보고 1년 값을 냈습니다.'
     },
     bath: {
-      name: '목욕탕', period: '한 달 평균', fuels: ['oil', 'gas'],
+      name: '목욕탕', label: '한 달 평균 기름값', gasLabel: '한 달 평균 가스비', gas: true,
+      elec: 150,
       months: 12, periodName: '1년이면',
-      note: ' 1년 내내 영업하는 것으로 보고 1년 값을 냈습니다.'
+      basis: '목욕탕 기준: 등유 208.4원(1,000kcal당), 보일러 효율 85%, 히트펌프 효율 2~3배, 일반용 전기 1kWh당 150원(계약전력 기본요금 별도)으로 계산한 예상치입니다. 1년 내내 영업하는 것으로 보고 1년 값을 냈습니다.',
+      gasBasis: '목욕탕 기준: 가스보일러 대비 히트펌프 효율 1.5~2배로 계산한 예상치입니다. 1년 내내 영업하는 것으로 보고 1년 값을 냈습니다.'
     }
   };
   var TYPE_TO_APPLY = { home:'가정집 (단독주택)', stay:'숙박업', bath:'목욕탕·사우나' };
 
-  function pct(f){ return Math.round(f.save[0] * 100) + '~' + Math.round(f.save[1] * 100) + '%'; }
+  /* 기름값(원) → 같은 열을 히트펌프로 냈을 때 전기료(원) */
+  function heatPumpCost(won, cop, elec){
+    var heatKcal = won / OIL_PRICE * 1000 * BOILER_EFF; // 실제로 쓰인 열
+    return heatKcal / 860 / cop * elec;                 // 860kcal = 1kWh
+  }
 
   var $ = function(id){ return document.getElementById(id); };
   var input = $('amount');
@@ -56,29 +67,28 @@
   function calc(){
     var key = document.querySelector('input[name="type"]:checked').value;
     var t = TYPES[key];
-    var multi = t.fuels.length > 1;
-    $('fuel-field').hidden = !multi;
-    var fkey = multi ? document.querySelector('input[name="fuel"]:checked').value : t.fuels[0];
-    var f = FUELS[fkey];
-    var label = t.period + ' ' + f.bill;
-
+    $('fuel-field').hidden = !t.gas;
+    var isGas = t.gas && document.querySelector('input[name="fuel"]:checked').value === 'gas';
+    var label = isGas ? t.gasLabel : t.label;
+    var boiler = isGas ? '가스보일러' : '기름보일러';
     $('amount-label').textContent = label;
-    $('basis').textContent = t.name + ' 기준: ' + f.name + ' 대비 난방비 ' + pct(f) +
-      ' 절감으로 계산한 예상치입니다.' + t.note + ' 실제 절감액은 히트펌프 효율·전기요금·사용량에 따라 달라집니다.';
-    $('a-type').value = TYPE_TO_APPLY[key] + (multi ? ' · ' + f.name : '');
+    $('basis').textContent = isGas ? t.gasBasis : t.basis;
+    $('a-type').value = TYPE_TO_APPLY[key] + (t.gas ? ' · ' + boiler : '');
 
     var amount = parseInt(input.value, 10);
     if (!amount) { $('result').hidden = true; last = null; syncApply(); return; }
 
     var now    = amount * 10000;
-    var saveLo = now * f.save[0];
-    var saveHi = now * f.save[1];
+    var hpHigh = isGas ? now / GAS_LOW  : heatPumpCost(now, COP_LOW,  t.elec);  // 효율 낮을 때 (비쌈)
+    var hpLow  = isGas ? now / GAS_HIGH : heatPumpCost(now, COP_HIGH, t.elec);  // 효율 높을 때 (쌈)
+    var saveLo = Math.max(0, now - hpHigh);
+    var saveHi = Math.max(0, now - hpLow);
 
     $('result').hidden = false;
     $('r-big').textContent  = range(saveLo, saveHi) + ' 절약';
-    $('r-now-name').textContent = '지금 난방비 (' + f.name + ')';
+    $('r-now-name').textContent = '지금 난방비 (' + boiler + ')';
     $('r-now').textContent  = amount.toLocaleString('ko-KR') + '만원';
-    $('r-hp').textContent   = range(now - saveHi, now - saveLo);
+    $('r-hp').textContent   = range(hpLow, hpHigh);
     $('r-period-name').textContent = t.periodName;
     $('r-period').textContent = range(saveLo * t.months, saveHi * t.months) + ' 절약';
 
