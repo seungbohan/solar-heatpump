@@ -1,4 +1,4 @@
-# 히트펌프119 — 히트펌프 설치 홍보 페이지
+# 히트펌프 — 히트펌프 설치 홍보 페이지
 
 정적 원페이지입니다. 배포: https://heatpump119.vercel.app/ (GitHub main 푸시 시 Vercel 자동 배포)
 

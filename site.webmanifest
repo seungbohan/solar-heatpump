@@ -1,6 +1,6 @@
 {
-  "name": "히트펌프119 — 난방비 계산기",
-  "short_name": "히트펌프119",
+  "name": "히트펌프 — 난방비 계산기",
+  "short_name": "히트펌프",
   "start_url": "/",
   "display": "browser",
   "background_color": "#FFFFFF",
