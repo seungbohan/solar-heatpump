@@ -9,4 +9,4 @@ Allow: /
 User-agent: Daum
 Allow: /
 
-Sitemap: https://seungbohan.github.io/solar-heatpump/sitemap.xml
+Sitemap: https://heatpump119.vercel.app/sitemap.xml
